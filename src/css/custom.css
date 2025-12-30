@@ -1,0 +1,237 @@
+/* Custom CSS for My AI Book */
+
+/* Primary color scheme */
+:root {
+  --ifm-color-primary: #2563eb;
+  --ifm-color-primary-dark: #1d4ed8;
+  --ifm-color-primary-darker: #1e40af;
+  --ifm-color-primary-darkest: #1e3a8a;
+  --ifm-color-primary-light: #3b82f6;
+  --ifm-color-primary-lighter: #60a5fa;
+  --ifm-color-primary-lightest: #93c5fd;
+}
+
+/* Header and navigation styling */
+.navbar {
+  background-color: #1e293b;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar__title {
+  color: #f8fafc;
+  font-weight: 600;
+}
+
+.navbar__link {
+  color: #cbd5e1;
+}
+
+.navbar__link:hover {
+  color: #f8fafc;
+}
+
+/* Hero banner styling */
+.hero {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  color: white;
+  padding: 4rem 0;
+}
+
+.hero__title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero__subtitle {
+  font-size: 1.25rem;
+  opacity: 0.9;
+}
+
+/* Card styling for documentation sections */
+.card {
+  border: none;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-bottom: 1.5rem;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.card__header {
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+/* Button styling */
+.button {
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.button--primary {
+  background-color: var(--ifm-color-primary);
+  border-color: var(--ifm-color-primary);
+}
+
+.button--primary:hover {
+  background-color: var(--ifm-color-primary-dark);
+  border-color: var(--ifm-color-primary-dark);
+}
+
+/* Content styling */
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.markdown h1 {
+  border-bottom: 2px solid var(--ifm-color-emphasis-200);
+  padding-bottom: 0.5rem;
+}
+
+/* Code block styling */
+.prism-code {
+  border-radius: 6px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Table styling */
+.markdown table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 1.5rem 0;
+}
+
+.markdown table th,
+.markdown table td {
+  padding: 0.75rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  text-align: left;
+}
+
+.markdown table th {
+  background-color: var(--ifm-color-emphasis-100);
+  font-weight: 600;
+}
+
+/* Sidebar styling */
+.menu {
+  font-size: 0.9rem;
+}
+
+.menu__list-item-collapsible .menu__link--sublist {
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-800);
+}
+
+/* Footer styling */
+.footer {
+  background-color: #1e293b;
+  color: #cbd5e1;
+  padding: 3rem 0 2rem 0;
+}
+
+.footer__title {
+  color: #f8fafc;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer__link-item {
+  color: #cbd5e1;
+}
+
+.footer__link-item:hover {
+  color: #f8fafc;
+}
+
+/* Alert styling */
+.alert {
+  border-radius: 6px;
+  border-left-width: 4px;
+}
+
+/* Search styling */
+.navbar__search-input {
+  border-radius: 4px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  padding: 0.5rem 1rem;
+}
+
+/* Responsive design improvements */
+@media (max-width: 996px) {
+  .hero {
+    padding: 2rem 0;
+  }
+
+  .hero__title {
+    font-size: 2rem;
+  }
+}
+
+/* Custom styling for documentation content */
+.docItemContainer {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* Breadcrumb styling */
+.theme-edit-this-page {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.theme-edit-this-page:hover {
+  background-color: var(--ifm-color-emphasis-100);
+  text-decoration: none;
+}
+
+/* Improved list styling */
+.markdown ul,
+.markdown ol {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+.markdown li {
+  margin-bottom: 0.5rem;
+}
+
+/* Blockquote styling */
+.markdown blockquote {
+  border-left: 4px solid var(--ifm-color-primary);
+  background-color: var(--ifm-color-emphasis-100);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0 4px 4px 0;
+}
+
+/* Improved link styling */
+.markdown a {
+  text-decoration: none;
+}
+
+.markdown a:hover {
+  text-decoration: underline;
+}
+
+/* Navigation sidebar active item */
+.menu__list-item--active > .menu__link {
+  border-right: 3px solid var(--ifm-color-primary);
+  font-weight: 600;
+}

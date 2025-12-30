@@ -1,55 +1,66 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!-- SYNC IMPACT REPORT:
+Version change: N/A → 1.0.0
+Modified principles: N/A (new constitution)
+Added sections: All sections (new constitution)
+Removed sections: N/A
+Templates requiring updates:
+  - .specify/templates/plan-template.md ✅ Updated to reflect new principles
+  - .specify/templates/spec-template.md ✅ Updated to reflect new standards
+  - .specify/templates/tasks-template.md ✅ Updated to reflect new constraints
+Follow-up TODOs: None
+-->
+# Spec-driven technical book with embedded RAG chatbot Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### Spec-first development
+Spec-first development: All features and functionality must be defined in specifications before implementation begins; Specifications must be complete and approved before coding starts; Clear requirements and acceptance criteria required for every feature
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### Verified technical accuracy
+Verified technical accuracy: All technical content must be fact-checked and verified; Code examples must be runnable and tested; Technical claims must be supported by evidence or authoritative sources
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### Clear, professional writing
+Clear, professional writing: Content must be written at Flesch-Kincaid grade 10-12 level; Professional tone and terminology required throughout; Clear explanations with appropriate context for target audience
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### Reproducible workflows
+Reproducible workflows: All development processes must be documented and reproducible; Build and deployment processes must be automated and version-controlled; Development environment setup must be clearly documented
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### Grounded AI responses only
+Grounded AI responses only: The RAG chatbot must only respond based on book content; Out-of-scope queries must be rejected; Responses must be traceable to specific content in the book
 
-### [PRINCIPLE_6_NAME]
+### Quality assurance and deployment
+Quality assurance and deployment: All content must be reviewed before publication; Deployment processes must be documented and secure; Secrets must be managed via environment variables
 
+## Standards
 
-[PRINCIPLE__DESCRIPTION]
+- Book platform: Docusaurus → GitHub Pages deployment
+- Authoring tools: Claude Code + Spec-Kit Plus for development
+- Code examples: Must be runnable and tested before inclusion
+- Writing level: Flesch-Kincaid grade 10-12 for accessibility
+- Technology stack: OpenAI Agents/ChatKit, FastAPI, Neon Postgres, Qdrant for RAG chatbot
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## RAG chatbot specifications
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+- Integration: Chatbot embedded directly in the book interface
+- Technology stack: OpenAI Agents/ChatKit, FastAPI, Neon Postgres, Qdrant
+- Content scope: Answers must derive only from book content
+- Feature support: Selected-text question answering capability
+- Query handling: Out-of-scope queries must be rejected appropriately
+- Data source: Book content only, no external knowledge sources
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+## Constraints and Success Criteria
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+- Content format: Markdown-based for documentation
+- Security: Secrets must be managed via environment variables only
+- Deployment: Process must be documented and reproducible
+- Success metrics: Book publicly deployed and accessible
+- Content quality: Spec-driven content creation and maintenance
+- Chatbot accuracy: Non-hallucinated, accurate responses based on book content
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution governs all development activities for the spec-driven technical book project. All implementation must align with these principles. Changes to these principles require explicit documentation and approval following the established amendment process. Development workflows must verify compliance with these principles at each stage.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+All PRs and reviews must verify compliance with these principles; Complexity must be justified with clear benefits; Use this constitution for development guidance and decision-making.
+
+**Version**: 1.0.0 | **Ratified**: 2025-12-27 | **Last Amended**: 2025-12-27
