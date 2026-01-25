@@ -1,0 +1,58 @@
+.breadcrumb {
+  margin: var(--ifm-spacing-scale-3) 0;
+  padding: var(--ifm-spacing-scale-2) 0;
+}
+
+.breadcrumbList {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.875rem;
+}
+
+.breadcrumbItem {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumbLink {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  padding: var(--ifm-spacing-scale-1) var(--ifm-spacing-scale-2);
+  border-radius: 4px;
+}
+
+.breadcrumbLink:hover {
+  color: var(--ifm-color-primary-darker);
+  background-color: var(--ifm-color-emphasis-700);
+}
+
+.breadcrumbCurrent {
+  color: var(--ifm-color-text-tertiary);
+  font-weight: 500;
+  padding: var(--ifm-spacing-scale-1) var(--ifm-spacing-scale-2);
+  background-color: var(--ifm-color-emphasis-600);
+  border-radius: 4px;
+}
+
+.breadcrumbSeparator {
+  color: var(--ifm-color-emphasis-400);
+  margin: 0 var(--ifm-spacing-scale-1);
+}
+
+@media (max-width: 768px) {
+  .breadcrumbList {
+    font-size: 0.75rem;
+  }
+
+  .breadcrumbLink,
+  .breadcrumbCurrent {
+    padding: var(--ifm-spacing-scale-1);
+  }
+}

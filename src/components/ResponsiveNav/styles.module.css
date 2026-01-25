@@ -1,0 +1,147 @@
+.responsiveNav {
+  width: 100%;
+}
+
+.responsiveNavMobile {
+  position: relative;
+}
+
+.mobileWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.menuToggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.menuToggle:focus {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+.burger {
+  position: relative;
+  width: 24px;
+  height: 2px;
+  background-color: var(--ifm-color-emphasis-300);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.burger::before,
+.burger::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: var(--ifm-color-emphasis-300);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.burger::before {
+  top: -8px;
+}
+
+.burger::after {
+  top: 8px;
+}
+
+.menuToggleOpen .burger {
+  background-color: transparent;
+}
+
+.menuToggleOpen .burger::before {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menuToggleOpen .burger::after {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.mobileMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--ifm-color-background);
+  border: 1px solid var(--ifm-color-emphasis-500);
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  margin-top: var(--ifm-spacing-scale-2);
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.mobileMenuContent {
+  padding: var(--ifm-spacing-scale-3);
+}
+
+.DesktopNav {
+  display: flex;
+  align-items: center;
+}
+
+/* Responsive behavior */
+@media (max-width: 996px) {
+  .menuToggle {
+    display: flex;
+  }
+
+  .DesktopNav {
+    display: none;
+  }
+
+  .responsiveNavOpen {
+    position: relative;
+  }
+}
+
+@media (min-width: 997px) {
+  .mobileWrapper {
+    display: none;
+  }
+}
+
+/* Enhanced touch targets for accessibility */
+@media (max-width: 996px) {
+  .menuToggle {
+    width: 48px;
+    height: 48px;
+  }
+
+  .mobileMenuContent > * {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* Smooth animations */
+.mobileMenu {
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

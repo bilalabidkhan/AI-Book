@@ -1,0 +1,103 @@
+.toc {
+  background-color: var(--ifm-color-background-elevated);
+  border: 1px solid var(--ifm-color-emphasis-500);
+  border-radius: 8px;
+  padding: var(--ifm-spacing-scale-4);
+  margin: var(--ifm-spacing-scale-4) 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+.toc:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.tocHeader {
+  margin: 0 0 var(--ifm-spacing-scale-3) 0;
+  padding-bottom: var(--ifm-spacing-scale-2);
+  border-bottom: 1px solid var(--ifm-color-emphasis-500);
+}
+
+.tocTitle {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--ifm-color-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tocList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.875rem;
+}
+
+.tocItem {
+  margin: var(--ifm-spacing-scale-1) 0;
+  padding: 0;
+}
+
+.tocLevel2 {
+  margin-left: 0;
+}
+
+.tocLevel3 {
+  margin-left: var(--ifm-spacing-scale-3);
+}
+
+.tocLevel4 {
+  margin-left: var(--ifm-spacing-scale-4);
+}
+
+.tocLink {
+  display: block;
+  padding: var(--ifm-spacing-scale-2) var(--ifm-spacing-scale-2);
+  text-decoration: none;
+  color: var(--ifm-color-text-secondary);
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  border-left: 2px solid transparent;
+}
+
+.tocLink:hover {
+  color: var(--ifm-color-primary);
+  background-color: var(--ifm-color-emphasis-700);
+  transform: translateX(2px);
+}
+
+.tocLinkActive {
+  color: var(--ifm-color-primary);
+  background-color: var(--ifm-color-emphasis-600);
+  border-left: 2px solid var(--ifm-color-primary);
+  font-weight: 500;
+}
+
+.tocLinkActive:hover {
+  background-color: var(--ifm-color-emphasis-500);
+}
+
+/* Scroll indicator for active section */
+.tocLinkActive::before {
+  content: "●";
+  margin-right: var(--ifm-spacing-scale-2);
+  color: var(--ifm-color-primary);
+}
+
+@media (max-width: 996px) {
+  .toc {
+    display: none;
+  }
+}
+
+/* Smooth scrolling enhancement */
+.tocLink {
+  scroll-margin-top: 100px;
+}
+
+/* Focus styles for accessibility */
+.tocLink:focus {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}

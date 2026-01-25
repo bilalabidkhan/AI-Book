@@ -11,7 +11,7 @@ const config = {
   url: 'https://your-docusaurus-site.example.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub Pages, this is usually '/<project-name>/'
-  baseUrl: '/',
+  baseUrl: '/my-ai-book/',
 
   // GitHub pages deployment config.
   organizationName: 'your-org', // Usually your GitHub org/user name.
@@ -86,23 +86,11 @@ const config = {
             items: [
               {
                 label: 'Introduction',
-                to: '/docs/',
+                to: '/docs/intro',
               },
               {
-                label: '🦾 Module 1: ROS 2 Humanoid Integration',
-                to: '/docs/modules/ros2-humanoid-integration',
-              },
-              {
-                label: '🌐 Module 2: Digital Twin',
-                to: '/docs/module-2-digital-twin',
-              },
-              {
-                label: '🧠 Module 3: AI-Robot Brain',
-                to: '/docs/module-3-ai-robot-brain',
-              },
-              {
-                label: '🗣️ Module 4: Vision-Language-Action',
-                to: '/docs/module-4-vla',
+                label: 'ROS 2 Humanoid Integration',
+                to: '/docs/modules/ros2-humanoid-integration/README',
               },
             ],
           },
