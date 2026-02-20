@@ -16,6 +16,19 @@
   }
 }
 
+@keyframes bounceCustom {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.bounce {
+  animation: bounceCustom 2s infinite;
+}
+
 .hero__title {
   font-size: 3rem;
   font-weight: bold;
@@ -51,7 +64,7 @@
   justify-content: center;
   flex-wrap: wrap;
   border: #24292f;
-  background-color: #b0b9c4;
+  background-color: #dbe2eb;
 }
 
 @media screen and (max-width: 996px) {
@@ -111,7 +124,7 @@
 
 .moduleCard:hover {
   transform: translateY(5px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 12px 20px rgba(6, 243, 188, 0.509);
 }
 
 .moduleCard h3 {

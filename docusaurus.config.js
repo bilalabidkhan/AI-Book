@@ -63,7 +63,7 @@ const config = {
       // Replace with your project's social card
       image: undefined,
       navbar: {
-        title: 'My AI Book',
+        title: '🤖 Physical AI & Humanoid Robotics Textbook',
         items: [
           {
             type: 'docSidebar',
@@ -107,15 +107,19 @@ const config = {
             ],
           },
           {
-            title: 'Resources',
+            title: 'Follow Us 🌟',
             items: [
               {
-                label: 'ROS 2 Documentation',
-                href: 'https://docs.ros.org/en/humble/',
+                label: 'Instagram',
+                href: 'https://www.instagram.com/bilalkhan12407', // replace with your URL
               },
               {
-                label: 'Docusaurus',
-                href: 'https://docusaurus.io',
+                label: 'LinkedIn',
+                href: 'https://linkedin.com/in/your-page', // replace with your URL
+              },
+              {
+                label: 'Facebook',
+                href: 'https://twitter.com/your-page', // replace with your URL
               },
             ],
           },

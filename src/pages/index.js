@@ -3,33 +3,38 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import styles from './index.module.css';
+import { useState, useEffect } from "react";
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+  const [fontSize, setFontSize] = useState("3.7rem");
+
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth <= 480) setFontSize("1.8rem");
+      else if (window.innerWidth <= 996) setFontSize("2.2rem");
+      else setFontSize("3.7rem");
+    }
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
+    <header className={clsx('hero hero--primary', styles.heroBanner)} style={{background: "linear-gradient(135deg, #0f2027, #203a43, #2c5364)"}}>
       
        <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
+        <h1 className="hero__title" style={{color: "white", fontSize: fontSize }}>Physical AI & Humanoid Robotics Textbook</h1>
 
-        <p className="hero__subtitle">
-          🤖 Physical AI & Humanoid Robotics
+        <p style={{ maxWidth: '790px', margin: '2rem auto', fontSize: '1.2rem', color: "white" }}>        
+          A complete guide to humanoid robotics covering 
+          ROS 2 integration, Digital Twins, AI-Robot Brains, 
+          and Vision-Language-Action systems — from simulation 
+          to real-world intelligence.
         </p>
 
-        <p style={{ maxWidth: '820px', margin: '1rem auto', fontSize: '1.1rem' }}>
-          A structured, university-level textbook on building intelligent humanoid robots —
-          from <strong>ROS 2 fundamentals</strong> to <strong> Digital Twins</strong>,
-          <strong> AI-Robot Brains</strong>, and <strong>Vision-Language-Action systems</strong>.
-        </p>
-
-        <p style={{ opacity: 0.9, marginBottom: '2rem' }}>
-          Designed for students, researchers, and developers working at the
-          intersection of AI and Robotics.
-        </p>
-
-        <div className="hero__buttons">
+        <div className={styles.bounce}>
           <Link
-            className="button button--primary button--lg"
+            className="button button--secondary button--lg"
             to="/docs/">
             📘 Start Reading
           </Link>
@@ -43,7 +48,7 @@ function ModulesSection() {
   return (
     <section className={styles.modulesSection}>
       <div className="container">
-       <h2 className={styles.sectionTitle}>📚 Course Modules</h2>
+       <h2 className={styles.sectionTitle}>📚 Explore All Modules</h2>
         <div className={styles.moduleGrid}>
 
           <div className={styles.moduleCard}>
